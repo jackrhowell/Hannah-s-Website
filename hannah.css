@@ -1,192 +1,121 @@
-/* Resetting default styles for the list */
-nav ul {
+/* Reset default styles */
+* {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
-
-/* Styling the navigation links */
-nav a {
-  text-decoration: none;
-  color: #333; /* Change this to your preferred text color */
-  font-family: 'Roxborough CF', sans-serif; /* Applying the custom font */
-  font-weight: 700;
-  font-size: 16px;
-  margin-right: 20px; /* Adjust the spacing between links */
-  transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-  color: #ff69b4; /* Change this to your preferred hover color */
-}
-
-/* Styling the navigation bar */
-nav {
-  background-color: #fff; /* Change this to your preferred background color */
-  padding: 15px 0; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-}
-
-/* Centering the navigation links */
-nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-/* Adding some spacing to the links */
-nav li {
-  margin: 0 10px;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-  }
-
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
-    color: #fff;
-  }
-
-  .headshot-container {
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .headshot {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .name {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-
-  .description {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #666;
-  }
-  body {
-    margin: 0;
-    overflow-x: hidden;
-  }
-
-  .gallery-container {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-  }
-
-  .gallery-item {
-    flex: 0 0 auto;
-    width: 300px; /* Adjust the width of each item as needed */
-    margin-right: 10px; /* Adjust the margin between items as needed */
-    scroll-snap-align: start;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd; /* Optional: Add a border around images */
-    border-radius: 4px; /* Optional: Add rounded corners to images */
-  }
-  /* About Me container styling */
-#about {
-  background-color: #fff; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffaf6;
+  color: #000000;
 }
 
-/* About Me section styling */
-#about h2 {
-  color: #333; /* Section title color */
+header {
+  background-color: #c79a99;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
   text-align: center;
-  margin-bottom: 20px; /* Adjust spacing between title and content */
 }
 
-#about p {
-  font-size: 18px; /* Paragraph font size */
-  line-height: 1.5;
-  color: #666; /* Paragraph text color */
+nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
-/* Mission container styling */
-#mission {
-  background-color: #f8f8f8; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
 }
-#mission h2 {
-  color: #333; /* Section title color */
+
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  font-family: 'Roxborough CF', sans-serif;
   text-align: center;
-  margin-bottom: 20px; /* Adjust spacing between title and content */
-}
-#mission p {
-  font-size: 18px; /* Paragraph font size */
-  line-height: 1.5;
-  color: #666; /* Paragraph text color */
+  margin-bottom: 30px;
 }
 
-/* How I Can Help container styling */
-#help {
-  background-color: #fff; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
+.headshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
-#help h2 {
-  color: #333; /* Section title color */
+
+.headshot {
+  width: 150px; /* Adjust size as needed */
+  border-radius: 50%;
+}
+
+.about-text {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#apply a {
+  display: block;
   text-align: center;
-  margin-bottom: 20px; /* Adjust spacing between title and content */
-}
-#help p {
-  font-size: 18px; /* Paragraph font size */
-  line-height: 1.5;
-  color: #666; /* Paragraph text color */
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-/* Results container styling */
-#results {
-  background-color: #f8f8f8; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
+/* Fancy section separation */
+section:not(:last-child) {
+  border-bottom: 2px solid #c79a99;
+  margin-bottom: 30px;
 }
-#results h2 {
-  color: #333; /* Section title color */
+#logo {
   text-align: center;
-  margin-bottom: 20px; /* Adjust spacing between title and content */
+  padding: 20px 0;
 }
 
-/* Testimonials container styling */
-#testimonials {
-  background-color: #fff; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
-}
-#testimonials h2 {
-  color: #333; /* Section title color */
-  text-align: center;
-  margin-bottom: 20px; /* Adjust spacing between title and content */
+#logo img {
+  width: 600px; /* Adjust size as needed */
 }
 
-/* Apply for Coaching container styling */
-#apply {
-  background-color: #f8f8f8; /* Container background color */
-  padding: 50px; /* Adjust padding as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-  border-radius: 15px; /* Rounded corners for the container */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.about-text {
+  flex: 1; /* Take up remaining space */
+  padding: 0 40px;
+}
+
+.headshot-container {
+  flex: 1; /* Take up remaining space */
+  text-align: center; /* Center headshot */
+}
+
+.headshot {
+  width: 150px; /* Adjust size as needed */
+  border-radius: 50%;
+  display: inline-block; /* Adjust alignment */
+  margin-right: 100px; /* Add spacing between text and headshot */
 }

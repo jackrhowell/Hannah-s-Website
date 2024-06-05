@@ -18,7 +18,8 @@ body {
 }
 
 #logo img {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   display: inline-block;
   margin: 0;
   vertical-align: top;
@@ -38,6 +39,7 @@ header {
 nav ul {
   list-style: none;
   text-align: center;
+  padding: 0;
 }
 
 nav ul li {
@@ -302,4 +304,50 @@ section:not(:last-child) {
   font-weight: bold;
   margin-top: 5px;
   color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .help-option {
+    flex: 1 1 100%;
+  }
+
+  .about-text,
+  .mission-text,
+  .help-text {
+    padding: 0 10px;
+  }
+
+  .testimonial-item video {
+    width: 100%;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .headshot {
+    width: 100px;
+  }
+
+  .call-to-action-link {
+    font-size: 1em;
+  }
+
+  .gallery-wrapper {
+    padding: 0 10px;
+  }
+
+  .gallery-item {
+    width: 80%;
+  }
 }

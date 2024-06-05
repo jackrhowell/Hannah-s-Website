@@ -1,24 +1,29 @@
-/* Ensure no conflicting styles for body background color */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff !important; /* Force background to white */
-  color: #000000;
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --accent-color: #c79a99;
+  --font-body: 'Montserrat', sans-serif;
+  --font-header: 'Roxborough CF', sans-serif;
 }
 
-/* Center the logo and reduce padding */
+body {
+  font-family: var(--font-body);
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-text-color);
+}
+
 #logo {
   text-align: center;
-  padding: 10px 0; /* Reduced padding */
+  padding: 10px 0;
 }
 
 #logo img {
-  width: 600px; /* Original size of the logo */
-  display: inline-block; /* Ensure the logo is inline */
-  margin: 0; /* Remove margin */
-  vertical-align: top; /* Align the logo to the top */
+  width: 600px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
 }
 
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +31,7 @@ body {
 }
 
 header {
-  background-color: #c79a99;
+  background-color: var(--accent-color);
   padding: 10px 0;
 }
 
@@ -42,145 +47,215 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #000000;
+  color: var(--main-text-color);
   font-weight: bold;
 }
 
 section {
-  padding: 50px 0;
-  text-align: center; /* Center content within the section */
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
 }
 
 h2 {
-  font-family: 'Roxborough CF', sans-serif;
+  font-family: var(--font-header);
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5em; /* Make header larger */
-  color: #c79a99; /* Stylish color for the header */
+  margin: 30px 0 50px;
+  font-size: 2.5em;
+  color: var(--accent-color);
   position: relative;
-  display: inline-block; /* Make header inline-block to fit underline */
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  cursor: pointer; /* Make header cursor a pointer */
+  display: inline-block;
+  padding-bottom: 20px;
 }
 
 h2::after {
   content: '';
-  width: 100%; /* Spread across the header text */
+  width: 100%;
   height: 4px;
-  background-color: #000000; /* Change to black */
+  background-color: var(--main-text-color);
   position: absolute;
-  left: 0; /* Align left */
+  left: 0;
   bottom: -10px;
   border-radius: 2px;
 }
 
-/* Remove underline for Apply for Coaching button */
 #apply h2::after {
   content: none;
 }
 
 .headshot-container {
-  text-align: center; /* Center headshot */
-  margin-bottom: 20px; /* Add some space below the headshot */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .headshot {
-  width: 150px; /* Adjust size as needed */
+  width: 150px;
   border-radius: 50%;
-  display: inline-block; /* Ensure the headshot is inline */
+  display: inline-block;
 }
 
 .about-text,
 .mission-text,
 .help-text {
-  text-align: center; /* Center the text */
-  line-height: 1.6; /* Improve readability with better line spacing */
-  margin: 0 auto; /* Center the text container */
-  max-width: 800px; /* Limit the width of the text for better readability */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
   padding: 0 20px;
+  text-align: left;
+}
+
+.about-text p,
+.mission-text p {
+  margin-bottom: 20px;
 }
 
 .mission-text ul,
 .help-text ul {
-  list-style: none; /* Remove default bullet points */
-  padding: 0;
+  list-style: disc;
+  padding-left: 20px;
 }
 
 .mission-text ul li,
 .help-text ul li {
   margin: 10px 0;
-  padding-left: 20px;
+  padding-left: 0;
   position: relative;
 }
 
-.mission-text ul li::before,
-.help-text ul li::before {
-  content: '•'; /* Custom bullet point */
-  color: #c79a99; /* Bullet point color */
-  font-size: 1.5em; /* Bullet point size */
-  position: absolute;
-  left: 0;
-  top: 0;
+.help-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Gallery container for horizontal scroll, one image at a time */
+.help-option {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(50% - 40px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.help-option h3 {
+  font-size: 1.8em;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.help-suboption {
+  margin-bottom: 20px;
+}
+
+.help-suboption h4 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.help-suboption ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.dropdown-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.dropdown-toggle::after {
+  content: ' ▼';
+}
+
+.call-to-action-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.call-to-action-link:hover {
+  color: var(--main-text-color);
+}
+
 .gallery-wrapper {
   display: flex;
-  justify-content: center; /* Center the gallery container */
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .gallery-container {
   display: flex;
+  width: 100%;
+  max-width: 800px;
   overflow-x: auto;
-  width: 300px; /* Match the width of the images */
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
 .gallery-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit browsers */
+  display: none;
 }
 
 .gallery-item {
   flex: 0 0 auto;
   scroll-snap-align: center;
-  width: 300px; /* Match the width of the images */
+  width: 100%;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
 
-#apply a.apply-button {
-  display: inline-block;
+#apply {
+  width: 100%;
   padding: 0;
-  margin-top: 20px;
+  margin: 0;
+}
+
+#apply a.apply-button {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
+  text-align: center;
+  background-color: var(--accent-color);
+  padding: 20px 0;
 }
 
 #apply a.apply-button h2 {
   margin: 0;
-  padding: 15px 30px;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   color: #ffffff;
-  background-color: #c79a99;
-  border: none;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-#apply a.apply-button h2:hover {
+#apply a.apply-button:hover {
   background-color: #a57877;
 }
 
-/* Fancy section separation */
 section:not(:last-child) {
-  border-bottom: 2px solid #c79a99;
+  border-bottom: 2px solid var(--accent-color);
   margin-bottom: 30px;
 }
 
@@ -191,11 +266,10 @@ section:not(:last-child) {
 }
 
 .about-text {
-  flex: 1; /* Take up remaining space */
+  flex: 1;
   padding: 0 40px;
 }
 
-/* Testimonial section styling */
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -213,7 +287,7 @@ section:not(:last-child) {
 }
 
 .testimonial-item video {
-  width: 80%; /* Make the video smaller */
+  width: 80%;
   height: auto;
   border-radius: 10px;
 }

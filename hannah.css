@@ -12,19 +12,6 @@ body {
   color: var(--main-text-color);
 }
 
-#logo {
-  text-align: center;
-  padding: 10px 0;
-}
-
-#logo img {
-  width: 100%;
-  max-width: 600px;
-  display: inline-block;
-  margin: 0;
-  vertical-align: top;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +38,27 @@ nav ul li a {
   text-decoration: none;
   color: var(--main-text-color);
   font-weight: bold;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+#logo {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#logo img {
+  width: 100%;
+  max-width: 600px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
 }
 
 section {
@@ -92,8 +100,23 @@ h2::after {
 
 .headshot {
   width: 150px;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 50%;
   display: inline-block;
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+@media (max-width: 768px) {
+  .headshot {
+    width: 100px; /* Adjust size for smaller screens */
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  .headshot {
+    width: 80px; /* Further adjust size for very small screens */
+  }
 }
 
 .about-text,
@@ -201,6 +224,7 @@ h2::after {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  padding: 10px 0; /* Add padding for better spacing */
 }
 
 .gallery-container {
@@ -218,7 +242,9 @@ h2::after {
 .gallery-item {
   flex: 0 0 auto;
   scroll-snap-align: center;
-  width: 100%;
+  width: 100%; /* Ensure consistent width */
+  max-width: 400px; /* Set a maximum width for better control */
+  margin: 0 10px; /* Add margin for spacing between items */
 }
 
 .gallery-item img {
@@ -313,6 +339,34 @@ section:not(:last-child) {
     margin: 10px 0;
   }
 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+    text-align: center;
+  }
+
+  header {
+    padding: 5px 0;
+  }
+
+  #logo {
+    padding: 5px 0;
+  }
+
+  #logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .help-option {
     flex: 1 1 100%;
   }
@@ -349,5 +403,21 @@ section:not(:last-child) {
 
   .gallery-item {
     width: 80%;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  header {
+    padding: 5px 0;
+  }
+
+  #logo {
+    padding: 5px 0;
+  }
+
+  #logo img {
+    max-width: 100%;
+    height: auto;
   }
 }

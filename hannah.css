@@ -351,3 +351,24 @@ section:not(:last-child) {
     width: 80%;
   }
 }
+
+/* Existing media query for max-width: 768px */
+@media (max-width: 768px) {
+  /* Adjust the header padding for mobile devices */
+  header {
+    padding: 5px 0; /* Reduce padding to minimize extra space */
+  }
+
+  /* Adjust the logo section padding for mobile devices */
+  #logo {
+    padding: 5px 0; /* Reduce padding to minimize extra space */
+  }
+
+  /* Ensure the logo image scales properly on mobile devices */
+  #logo img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Other responsive adjustments as needed */
+}

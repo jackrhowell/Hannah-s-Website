@@ -255,23 +255,23 @@ h2::after {
 }
 
 #apply {
+  padding: 0; /* Ensure no padding */
+  margin: 0; /* Ensure no margin */
   width: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 #apply a.apply-button {
   display: block;
   width: 100%;
-  height: 100%;
   text-decoration: none;
   text-align: center;
   background-color: var(--accent-color);
-  padding: 20px 0;
+  padding: 20px 0; /* Adjust padding for the button */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 #apply a.apply-button h2 {
-  margin: 0;
+  margin: 0; /* Ensure no margin */
   font-size: 2em;
   font-weight: bold;
   color: #ffffff;
@@ -282,9 +282,10 @@ h2::after {
   background-color: #a57877;
 }
 
+/* Ensure the section above does not have extra bottom margin or padding */
 section:not(:last-child) {
-  border-bottom: 2px solid var(--accent-color);
-  margin-bottom: 30px;
+  margin-bottom: 0; /* Ensure no margin at the bottom of the section */
+  padding-bottom: 0; /* Ensure no padding at the bottom of the section */
 }
 
 .about-container {

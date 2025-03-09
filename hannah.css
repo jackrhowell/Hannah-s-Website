@@ -6,6 +6,10 @@
   --font-header: 'Roxborough CF', sans-serif;
 }
 
+section p.policy-text {
+  color: var(--accent-color) !important;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--main-bg-color) !important;
@@ -421,4 +425,6 @@ section:not(:last-child) {
     max-width: 100%;
     height: auto;
   }
+  
+
 }

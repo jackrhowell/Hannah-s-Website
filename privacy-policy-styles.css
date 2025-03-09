@@ -1,0 +1,30 @@
+[data-custom-class='body'], [data-custom-class='body'] * {
+    background: transparent !important;
+}
+[data-custom-class='title'], [data-custom-class='title'] * {
+    font-family: Arial !important;
+    font-size: 26px !important;
+    color: #000000 !important;
+}
+[data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+    font-family: Arial !important;
+    color: #595959 !important;
+    font-size: 14px !important;
+}
+.back-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #a57877;
+    transform: scale(1.05);
+  }
+/* Repeat for other styles */
